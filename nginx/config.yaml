@@ -1,0 +1,32 @@
+app: nginx_template
+app_info:
+  container: application
+  deployment: single
+  description: Sample container that demonstrates nginx server on ubuntu
+  language: node
+  node_types:
+  - MEN
+  targets:
+  - vhx09-10
+  - vhc05
+  type: app
+  version: 2.0.6
+  view: :9100
+docker:
+  ports:
+    publish:
+    - 9070:9070
+  secure:
+    arg:
+      partner_features: []
+    label:
+      devices: []
+      features:
+      - DEVELOPER
+      unauth_host: true
+      uuid: 70412AA3-1AA2-4E48-89E4-F714D633BC8A
+      volumes:
+        offers: []
+        persists: []
+        requests: []
+version: 2
